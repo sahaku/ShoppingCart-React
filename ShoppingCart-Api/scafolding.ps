@@ -1,0 +1,7 @@
+dotnet ef dbcontext scaffold `
+"Server=SHASHTEEPC;Database=Shopping;Trusted_Connection=True;TrustServerCertificate=True" `
+Microsoft.EntityFrameworkCore.SqlServer `
+--output-dir Models `
+--context ShoppingContext `
+--data-annotations `
+--force

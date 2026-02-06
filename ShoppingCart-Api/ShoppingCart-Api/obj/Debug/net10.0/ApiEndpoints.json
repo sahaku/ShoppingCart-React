@@ -1,0 +1,118 @@
+[
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.OpenAiController",
+    "Method": "CartSuggestions",
+    "RelativePath": "api/aiservice/cart-suggestions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ShoppingCart_Api.Controllers.CartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.OpenAiController",
+    "Method": "Chat",
+    "RelativePath": "api/aiservice/chat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ShoppingCart_Api.Controllers.AiRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.OpenAiController",
+    "Method": "GenerateDescription",
+    "RelativePath": "api/aiservice/generate-description",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "ShoppingCart_Api.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.OpenAiController",
+    "Method": "Search",
+    "RelativePath": "api/aiservice/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ShoppingCart_Api.Controllers.AiSearchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.OpenAiController",
+    "Method": "SmartSearch",
+    "RelativePath": "api/aiservice/smart-search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ShoppingCart_Api.Controllers.SearchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.CartController",
+    "Method": "GetCartProduct",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.CartController",
+    "Method": "PostCartItems",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carts",
+        "Type": "ShoppingCart_Api.Controllers.CartModel[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart_Api.Controllers.CartController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Cart/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
