@@ -146,8 +146,9 @@ namespace ShoppingCart_Api.Controllers
         }
 
         [HttpPost("generate-description")]
-        public async Task<IActionResult> GenerateDescription([FromBody] Product product)
+        public async Task<IActionResult> GenerateDescription([FromBody] CartRequest request)
         {
+            var product = request.Items[0];
             var prompt = $@"
                 Write a creative product description for the following product:
                 Name: {product.ProductName}
@@ -167,8 +168,9 @@ namespace ShoppingCart_Api.Controllers
         [HttpPost("smart-search")]
         public async Task<IActionResult> SmartSearch([FromBody] SearchRequest request)
         {
+            var item = request.Items;
             var prompt = $@"
-                Given the user search query: ""{request.Query}"",
+                Given the user search query: ""{request.Items}"",
                 suggest relevant product categories and keywords to improve search results.
                 Respond in this JSON format:
                 {{
@@ -188,6 +190,7 @@ namespace ShoppingCart_Api.Controllers
         [HttpPost("cart-suggestions")]
         public async Task<IActionResult> CartSuggestions([FromBody] CartRequest request)
         {
+            //var request =cartRequest.Items[0];
             var itemsDescription = string.Join(", ", request.Items.Select(i => i.ProductName));
             var prompt = $@"
                 The user has the following items in their shopping cart: {itemsDescription}.
@@ -207,17 +210,25 @@ namespace ShoppingCart_Api.Controllers
         }
 
     }
+
+    public class CartRequestWrapper
+    {
+        public List<CartRequest> Query { get; set; }
+    }
     public class AiRequest
     {
+        public string Model { get; set; } = "llama3.1";
         public string Prompt { get; set; }
+        public bool Stream { get; set; } = false;
     }
+
     public class SearchRequest
     {
-        public string Query { get; set; }
+        public List<string> Items { get; set; }
     }
     public class CartRequest
     {
-        public List<Product> Items { get; set; }
+        public List<ProductModel> Items { get; set; }
     }
     public class AiSearchRequest
     {

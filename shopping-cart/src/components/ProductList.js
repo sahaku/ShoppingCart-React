@@ -11,8 +11,8 @@ function ProductList() {
   const [searchKeywords, setSearchKeywords] = useState("");
   const handleSmartSearch = async () => {
     try {
-      const resp = await fetchApi("smart-search", { query: searchText });
-      setProducts(resp.data.products);
+      const resp = await fetchApi("smart-search", { items: [searchText] });
+      setProducts(resp);
       setSearchKeywords(resp.data.keywords);
     } catch (err) {
       console.error(err);

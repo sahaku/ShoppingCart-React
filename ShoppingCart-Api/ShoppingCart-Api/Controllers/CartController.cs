@@ -89,15 +89,11 @@ namespace ShoppingCart_Api.Controllers
 
     public class ProductModel
     {
-       // [JsonPropertyName("i")]
-        public int Id { get; set; }
-        //[JsonPropertyName("p")]
-        public string? ProductName { get; set; }
-
-       // [JsonPropertyName("p")]
+        public int Id { get; set; }       
+        public string? ProductName { get; set; }      
         public Double Price { get; set; }
-        public string? Description { get; set; }
-        //[StringLength(100)]
+        public string? Description { get; set; }      
         public string? Category { get; set; }
+        public int? Quantity { get; set; }
     }
 }

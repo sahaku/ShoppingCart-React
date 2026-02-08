@@ -13,9 +13,9 @@ function Cart() {
   const handleSuggestions = async () => {
     setLoading(true);
     try {
-      const cardProducts = items.map((i) => i.product);
+      const cardProducts = items.map((i) => i);
       const resp = await fetchApi("cart-suggestions", cardProducts);
-      setSuggestions(resp.data);
+      setSuggestions(resp.suggestions);
     } catch (err) {
       setSuggestions("Could not fetch suggestions.");
     } finally {
@@ -60,24 +60,26 @@ function Cart() {
               Card total:<b>${total}</b>
             </h4>
           )}
-          <div>
-            <button
-              className="btn btn-outline-secondary me-2"
-              onClick={clearCart}
-            >
-              Clear Cart
-            </button>
-            <button
-              className="btn btn-outline-primary"
-              onClick={handleSuggestions}
-              disabled={loading}
-            >
-              {loading ? "Getting AI suggestions..." : "AI Suggestions"}
-            </button>
-          </div>
+          {items.length > 0 && (
+            <div>
+              <button
+                className="btn btn-outline-secondary me-2"
+                onClick={clearCart}
+              >
+                Clear Cart
+              </button>
+              <button
+                className="btn btn-outline-primary"
+                onClick={handleSuggestions}
+                disabled={loading}
+              >
+                {loading ? "Getting AI suggestions..." : "AI Suggestions"}
+              </button>
+            </div>
+          )}
         </div>
       </div>
-      {suggestions && (
+      {suggestions && items.length > 0 && (
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">AI Suggestions</h5>

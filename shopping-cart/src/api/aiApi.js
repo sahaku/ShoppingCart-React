@@ -1,11 +1,13 @@
 const BASE_URL = "https://localhost:7038/api/aiservice";
 
-export async function fetchApi(endpoint, query) {
+export async function fetchApi(endpoint, items) {
   const url = `${BASE_URL}/${endpoint}`;
+  const data = JSON.stringify({ items });
+  console.log(data);
   const resp = await fetch(url, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ query }),
+    body: data,
   });
   return resp.json();
 }

@@ -9,8 +9,8 @@ export default function ProductCard({ product }) {
   const handleGenerateDescription = async () => {
     setLoading(true);
     try {
-      const resp = await fetchApi("generate-description", product);
-      setAiDescription(resp.data);
+      const resp = await fetchApi("generate-description", [product]);
+      setAiDescription(resp.description);
     } catch (err) {
       setAiDescription("Could not generate description.");
     } finally {
