@@ -54,8 +54,7 @@
               "RelativeToolTip": "ShoppingCart-Api\\Controllers\\OpenAiController.cs",
               "ViewState": "AgIAANcAAAAAAAAAAAAUwOYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T02:01:10.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-06T02:01:10.535Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "ShoppingCart-Api\\DataLayer\\ProductService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T02:34:15.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T02:34:15.691Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "ShoppingCart-Api\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T02:31:51.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T02:31:51.974Z"
             },
             {
               "$type": "Document",
@@ -127,7 +124,7 @@
               "RelativeDocumentMoniker": "ShoppingCart-Api\\Controllers\\CartController.cs",
               "ToolTip": "C:\\git\\ShoppingCart-React\\ShoppingCart-Api\\ShoppingCart-Api\\Controllers\\CartController.cs",
               "RelativeToolTip": "ShoppingCart-Api\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAcwF4AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAcwFwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-31T05:17:12.201Z",
               "EditorCaption": ""
